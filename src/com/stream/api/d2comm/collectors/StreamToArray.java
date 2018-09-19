@@ -1,4 +1,4 @@
-package com.stream.api.d2comm;
+package com.stream.api.d2comm.collectors;
 
 import java.util.stream.Stream;
 

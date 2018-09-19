@@ -1,5 +1,6 @@
-package com.stream.api.d2comm;
+package com.stream.api.d2comm.collectors;
 
+import com.stream.api.d2comm.domain.Phone;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

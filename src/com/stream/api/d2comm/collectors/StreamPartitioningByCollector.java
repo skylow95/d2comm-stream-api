@@ -1,5 +1,6 @@
-package com.stream.api.d2comm;
+package com.stream.api.d2comm.collectors;
 
+import com.stream.api.d2comm.domain.Phone;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -17,8 +18,10 @@ public class StreamPartitioningByCollector {
 
         Map<Boolean, List<Phone>> phonesByPrice = phones
                 .stream()
-                .collect(Collectors
-                        .partitioningBy(p -> p.getPrice() % 2 == 0, Collectors.toCollection(LinkedList::new)));
+                .collect(Collectors.partitioningBy(
+                        p -> p.getPrice() % 2 == 0, // умова по якій групуються значення
+                        Collectors.toCollection(LinkedList::new) // тип колекції
+                        ));
 
         phonesByPrice.forEach((price, phone) -> System.out.format("price %s: %s\n", price, phone.toString()));
     }
