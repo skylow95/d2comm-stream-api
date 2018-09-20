@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 public class SteamMapCustomMapper {
 
     public static void main(String[] args) {
-        String[] strings = Stream.of("a", "b", "c").toArray(String[]::new);
+        String[] strings = Stream.of("12", "b", "c").toArray(String[]::new);
         String result = encodedAddressUsingWrapper(strings);
         System.out.println(result);
     }
@@ -17,7 +17,7 @@ public class SteamMapCustomMapper {
     static String encodedAddressUsingWrapper(String... address) {
         return Arrays.stream(address)
                 .map(wrapper(s -> URLEncoder.encode(s, "UTF-8")))
-                .collect(Collectors.joining(","));
+                .collect(Collectors.joining(", "));
     }
 
     private static <T, R, E extends Exception> Function<T, R> wrapper(FunctionWithException<T, R, E> func) {

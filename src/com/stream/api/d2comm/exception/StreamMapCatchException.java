@@ -10,13 +10,14 @@ public class StreamMapCatchException {
 
     public static void main(String[] args) {
         List<Integer> integerStream = Arrays.asList(Stream.of(1, 2, 3).toArray(Integer[]::new));
-        List<Integer> scale = scale(integerStream, 1);
-        scale.forEach(System.out::println);
-        scale(integerStream, 0);
+//        List<Integer> scale = scale(integerStream, 1);
+//        scale.forEach(System.out::println);
+//
+//        Stream.of(120, 410, 85, 32, 314, 12)
+//                .sorted(Comparator.naturalOrder())
+//                .forEach(System.out::println);
 
-        Stream.of(120, 410, 85, 32, 314, 12)
-                .sorted(Comparator.naturalOrder())
-                .forEach(System.out::println);
+        scale(integerStream, 0);
     }
 
     private static Integer divide(Integer value, Integer factor) {

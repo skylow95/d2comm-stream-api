@@ -2,6 +2,7 @@ package com.stream.api.d2comm.map;
 
 import com.stream.api.d2comm.domain.Phone;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -43,7 +43,6 @@ public class StreamGroupingByCollector {
                         Collectors.toCollection(LinkedList::new)
                         ));
 
-        phonesByPrice.forEach((price, phone) -> System.out.format("price %s: %s\n", price, phone));
     }
 
 }

@@ -6,8 +6,11 @@ public class ParallelStreamWithSort {
 
     public static void main(String[] args) {
         parallelStream();
+        System.out.println();
         System.out.println("### SORTED:");
         sortParallelStream();
+        System.out.println();
+        System.out.println("### SORTED:");
         sortParallelStreamOrdered();
     }
 
@@ -48,6 +51,7 @@ public class ParallelStreamWithSort {
                 })
                 .forEach(s -> System.out.format("forEach: %s [%s]\n",
                         s, Thread.currentThread().getName()));
+
     }
 
     private static void sortParallelStreamOrdered() {

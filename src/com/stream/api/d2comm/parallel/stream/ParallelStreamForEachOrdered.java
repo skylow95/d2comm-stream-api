@@ -5,18 +5,18 @@ import java.util.stream.IntStream;
 public class ParallelStreamForEachOrdered {
 
     public static void main(String[] args) {
-        IntStream.range(0, 100000)
+        IntStream.range(0, 10000)
                 .parallel()
-                .filter(x -> x % 10000 == 0)
-                .map(x -> x / 10000)
+                .filter(x -> x % 10 == 0)
+                .map(x -> x / 10)
                 .forEach(System.out::println);
 
         System.out.println("###ORDERED stream:");
 
-        IntStream.range(0, 100000)
+        IntStream.range(0, 10000)
                 .parallel()
-                .filter(x -> x % 10000 == 0)
-                .map(x -> x / 10000)
+                .filter(x -> x % 10 == 0)
+                .map(x -> x / 10)
                 .forEachOrdered(System.out::println);
     }
 
